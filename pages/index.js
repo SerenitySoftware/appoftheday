@@ -30,6 +30,6 @@ export async function getServerSideProps(context) {
 
 export default function Home({ app }) {
   return (
-    <Profile app={app} mode="index" />
+    <Profile app={app} />
   )
 }

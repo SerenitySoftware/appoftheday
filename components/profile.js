@@ -4,10 +4,10 @@ export default function Profile({app}) {
   return (
       <div className="container mx-auto max-w-4xl bg-slate-200 h-full shadow-lg shadow-slate-500">
         <Head>
-          <title>App of the Day</title>
+          <title>{app.title + ' - App of the Day'}</title>
           <meta name="description" content="One app you'll love each day" />
           <link rel="icon" href="/favicon.ico" />
-          <script async src="https://cdn.tailwindcss.com"></script>
+          <script src="https://cdn.tailwindcss.com"></script>
         </Head>
         <div className="py-20 text-center text-2xl bg-slate-800">
           <h1 className="text-white text-5xl font-extrabold tracking-tight">App of the Day</h1>
@@ -22,7 +22,7 @@ export default function Profile({app}) {
                 <h2 className="text-gray-400 text-xl">by {app.creator}</h2>
             }
           </div>
-          <div className="grid grid-cols-2 gap-5 py-5 px-10">
+          <div className="columns-1 md:columns-2 gap-5 py-5 px-10">
             <div>
               <div className="border-b">
                 <h2 className="text-gray-500 text-2xl mb-3">{app.subtitle}</h2>
@@ -54,7 +54,7 @@ export default function Profile({app}) {
                 </a>
               </div>
             </div>
-            <div className="group relative rounded-lg">
+            <div className="mt-10 md:mt-0">
               <img
                   src={app.images.main}
                   alt={'Screenshot of ' + app.title}/>
