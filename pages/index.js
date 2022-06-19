@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 
 export async function getServerSideProps(context) {
   return {
@@ -43,7 +42,7 @@ export default function Home({ app }) {
       </div>
       <div className="bg-white border-y-2 border-slate-300 relative">
         <div className="border-2 border-slate-300 absolute -top-10 left-10">
-          <Image src={app.images.icon} alt={'Icon for ' + app.title}/>
+          <img src={app.images.icon} alt={'Icon for ' + app.title}/>
         </div>
         <div className="pt-14 px-10 flex flex-row items-baseline gap-2">
           <h1 className="text-gray-700 text-5xl italic font-extrabold tracking-tight">{app.title}</h1>
@@ -84,7 +83,7 @@ export default function Home({ app }) {
             </div>
           </div>
           <div className="group relative rounded-lg">
-            <Image
+            <img
                 src={app.images.main}
                 alt={'Screenshot of ' + app.title}/>
           </div>
