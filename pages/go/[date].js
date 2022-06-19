@@ -1,24 +1,5 @@
 import { loader, tracker } from '../../lib/data';
-
-function getUserAgent(req) {
-  return req.headers['user-agent'];
-}
-
-function getIPAddress(req) {
-  if (req.headers["x-forwarded-for"]) {
-    return req.headers["x-forwarded-for"].split(',')[0];
-  }
-
-  if (req.headers["x-real-ip"]) {
-    return req.headers["x-real-ip"];
-  }
-
-  return req.socket.remoteAddress;
-}
-
-function getReferrer(req) {
-  return req.headers['referer'];
-}
+import { getUserAgent, getIPAddress, getReferrer } from '../../lib/requests';
 
 export async function getServerSideProps(context) {
   const date = context.query.date;
