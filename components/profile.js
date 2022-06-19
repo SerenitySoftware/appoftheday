@@ -9,20 +9,20 @@ export default function Profile({app}) {
           <link rel="icon" href="/favicon.ico" />
           <script src="https://cdn.tailwindcss.com"></script>
         </Head>
-        <div className="py-20 text-center text-2xl bg-slate-800">
+        <div className="pt-10 pb-20 md:pt-20 text-center text-2xl bg-slate-800">
           <h1 className="text-white text-5xl font-extrabold tracking-tight">App of the Day</h1>
         </div>
         <div className="bg-white border-y-2 border-slate-300 relative">
           <div className="border-2 border-slate-300 absolute -top-10 left-10">
             <img src={app.images.icon} alt={'Icon for ' + app.title}/>
           </div>
-          <div className="pt-14 px-10 flex flex-row items-baseline gap-2">
+          <div className="pt-14 px-5 sm:px-10 flex flex-row items-baseline gap-2">
             <h1 className="text-gray-700 text-5xl italic font-extrabold tracking-tight">{app.title}</h1>
             {app.creator &&
                 <h2 className="text-gray-400 text-xl">by {app.creator}</h2>
             }
           </div>
-          <div className="columns-1 md:columns-2 gap-5 py-5 px-10">
+          <div className="columns-1 md:columns-2 gap-5 py-5 px-5 sm:px-10">
             <div>
               <div className="border-b">
                 <h2 className="text-gray-500 text-2xl mb-3">{app.subtitle}</h2>
@@ -61,7 +61,7 @@ export default function Profile({app}) {
             </div>
           </div>
         </div>
-        <div className="px-10 py-5 flex flex-row justify-between">
+        <div className="px-5 sm:px-10 py-5 flex flex-row justify-between">
           <p>
             Lovingly made by <a href="https://www.serenity.software" target="_blank" className="text-sky-700">Serenity
             Software</a>
