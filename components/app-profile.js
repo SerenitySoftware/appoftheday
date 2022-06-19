@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function AppProfile({app}) {
   return (
@@ -46,12 +47,11 @@ export default function AppProfile({app}) {
                   </div>
               }
               <div className="mt-5">
-                <a
-                    href={'/go/' + app.date + '/' + app.slug + '/'}
-                    target="_blank"
-                    className="inline-block rounded-md bg-sky-700 text-white border hover:border-sky-700 hover:text-sky-700 hover:bg-white py-3 px-5 tracking-tight transition-colors">
-                  Go to app ➜
-                </a>
+                <Link href={'/go/' + app.date}>
+                  <a target="_blank" className="inline-block rounded-md bg-sky-700 text-white border hover:border-sky-700 hover:text-sky-700 hover:bg-white py-3 px-5 tracking-tight transition-colors">
+                    Go to app ➜
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="mt-10 md:mt-0">
