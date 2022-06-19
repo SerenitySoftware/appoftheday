@@ -7,7 +7,7 @@ export default function Profile({app}) {
           <title>{app.title + ' - App of the Day'}</title>
           <meta name="description" content="One app you'll love each day" />
           <link rel="icon" href="/favicon.ico" />
-          <script async src="https://cdn.tailwindcss.com"></script>
+          <script src="https://cdn.tailwindcss.com"></script>
         </Head>
         <div className="pt-10 pb-20 md:pt-20 text-center text-2xl bg-slate-800">
           <h1 className="text-white text-5xl font-extrabold tracking-tight">App of the Day</h1>
