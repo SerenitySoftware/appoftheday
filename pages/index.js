@@ -1,23 +1,21 @@
-import Profile from '../components/profile';
 import { getDateSlug } from '../lib/dates';
-import clientPromise from '../lib/mongodb';
+import { loader } from '../lib/data';
+import AppProfile from '../components/app-profile';
 
 export async function getServerSideProps(context) {
   const date = getDateSlug();
-  const client = await clientPromise;
-  const db = client.db("aotd");
-  const app = await db.collection("apps").findOne({date: date});
-  delete app._id;
+  const app = await loader(date);
 
   return {
     props: {
-      app
+      app,
+      date,
     }
   }
 }
 
 export default function Home({ app }) {
   return (
-    <Profile app={app} />
+    <AppProfile app={app} />
   )
 }

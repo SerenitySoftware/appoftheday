@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Profile({app}) {
+export default function AppProfile({app}) {
   return (
       <div className="container mx-auto max-w-4xl bg-slate-200 h-full shadow-lg shadow-slate-500">
         <Head>
