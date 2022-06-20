@@ -1,10 +1,14 @@
 import { getDateSlug } from '../lib/dates';
-import { loader } from '../lib/data';
+import { loader, mostRecent } from '../lib/data';
 import AppProfile from '../components/app-profile';
 
 export async function getServerSideProps(context) {
   const date = getDateSlug();
-  const app = await loader(date);
+  let app = await loader(date);
+
+  if (!app) {
+    app = await mostRecent();
+  }
 
   return {
     props: {
