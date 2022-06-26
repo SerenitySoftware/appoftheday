@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { getDateSlug } from "../lib/dates";
 
 export default function Layout({ children }) {
   return (
@@ -10,6 +11,13 @@ export default function Layout({ children }) {
           <script src="https://cdn.tailwindcss.com"></script>
         </Head>
         <main>
+          {getDateSlug() < "2022-07-01" &&
+            <div className="bg-amber-300 border-b-4 border-red-400 py-2">
+              <div className="text-center text-xl">
+                <p>Hello! App of the Day is officially launching on July 1st, 2022.</p>
+              </div>
+            </div>
+          }
           <div className="container mx-auto max-w-4xl bg-slate-200 h-full shadow-lg shadow-slate-500">
             <div className="pt-10 pb-20 md:pt-20 text-center text-2xl bg-slate-800">
               <h1 className="text-white text-5xl font-extrabold tracking-tight">App of the Day</h1>
