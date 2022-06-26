@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AppProfile({app}) {
   return (
-      <div className="bg-white border-y-2 border-slate-300 relative">
+      <div className="bg-white border-t-2 border-slate-300 relative">
         <div className="border-2 border-slate-300 absolute -top-10 left-10">
           <img src={app.images.icon} alt={'Icon for ' + app.title}/>
         </div>

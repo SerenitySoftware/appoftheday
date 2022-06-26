@@ -15,7 +15,7 @@ export default function Layout({ children }) {
               <h1 className="text-white text-5xl font-extrabold tracking-tight">App of the Day</h1>
             </div>
             {children}
-            <div className="px-5 sm:px-10 py-5 flex flex-row justify-between">
+            <div className="px-5 sm:px-10 py-5 flex flex-row justify-between border-t-2 border-slate-300">
               <p>
                 Lovingly made by <a href="https://www.serenity.software" target="_blank" className="text-sky-700">Serenity
                 Software</a>
